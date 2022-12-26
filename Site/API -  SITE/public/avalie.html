@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalie</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" 
+    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" 
+    crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ea8cfd2902.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="fotos/logo sem letra.ico">
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+
+<style>
+
+
+</style>
+
+<script>
+
+</script>
+<body class="body3" onload="informacoes()">
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="fotos/logo 2.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="WeGrowffee1.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WeGrowffee1.html#quemsomos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WeGrowffee1.html#nossavisao">Nosso Objetivo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WeGrowffee1.html#faleconosco">Fale Conosco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resultados">Avaliações</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Acompanhe
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="calculadora.html">Simule</a>
+                                <a class="dropdown-item" href="grafico.html">Gráficos</a>
+                                <a class="dropdown-item" href="avalie.html">Avalie</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="WeGrowffee.html#home" onclick="deslogar()">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container1">
+        <div class="card">
+            <div class="content">
+                <form action="" id="form_avaliacao">
+                <h1>Avalie a WeGrowffee! </h1>
+                <p>
+                    Título: <br><br>
+                    <input name="titulo" class="inputfc" type="text" placeholder="Título">
+                </p>
+                <p>
+                    Nota 0-5: <br><br>
+                    <input name="nota" class="inputfc" type="Number" placeholder="5">
+                </p>
+                <p>
+                    Mensagem: <br/><br>
+                    <textarea name="mensagem" class="inputfc" type="text" placeholder="Mensagem" style="word-wrap: break-word; height: auto; width: 400px;"></textarea>
+                </p>
+                <input type="text" id="fk" name="fkUsuario" style="display: none;">
+            </form>
+                <p>
+                    <button class="botao2" onclick="enviar()" style="width: 150px;">Enviar Avaliação</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <video autoplay muted loop>
+        <source src="fotos/production ID_4081313.mp4" type="video/mp4">
+    </video>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  
+    <script type="text/javascript">
+        $(document).scroll(function(){
+            $('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+        });
+    </script>
+</body>
+
+</html>
+<script src="scripts.js"></script>
+<script>
+    function enviar(){
+    
+        
+        
+        var formulario = new URLSearchParams(new FormData(document.getElementById('form_avaliacao')));
+        
+        if (fks.indexOf(Number(sessionStorage.ID_USUARIO)) != -1){
+            alert('Você já fez uma avaliação!!');
+            return false;
+        }
+    var titulo = formulario.get('titulo');
+    var nota = formulario.get('nota');
+    var mensagem = formulario.get('mensagem');
+    var fkUsuario = formulario.get('fkUsuario');
+
+    
+        if(titulo.length > 45){
+            alert('Título muito grande!!');
+            return false;
+        }
+        if (nota < 0 || nota > 5){
+            alert('Nota tem que ser entre 0 e 5!!');
+            return false;
+        }
+
+        if (mensagem.length > 150){
+            alert('A mensagem tem um limite de 150 caracteres!!');
+            return false;
+        }
+
+        fetch("/avaliacoes/enviar", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("Avaliação enviada com sucesso!!");
+                window.location = "WeGrowffee1.html";
+            } else {
+                throw("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+    
+
+    function validarSessao() {
+        // aguardar();
+
+        var email = sessionStorage.EMAIL_USUARIO;
+        var nome = sessionStorage.NOME_USUARIO;
+        var fkEmpresa = sessionStorage.FK_EMPRESA;
+        var estufa = sessionStorage.NOME_ESTUFA;
+        
+        var fk_Usuario = sessionStorage.ID_USUARIO;
+
+        if (email != null && nome != null) {
+            // finalizarAguardar();
+
+
+            document.getElementById('fk').value = fk_Usuario;
+
+        } else {
+            alert('Você Não Está Logado!!');
+            window.location = "login.html";
+        }
+    }
+    validarSessao();
+    var fks = [];
+    function deslogar() {
+        delete sessionStorage.EMAIL_USUARIO;
+        delete sessionStorage.NOME_USUARIO;
+        delete sessionStorage.FK_EMPRESA;
+        delete sessionStorage.NOME_ESTUFA;
+
+    }
+
+
+    function informacoes(){
+        fetch("/avaliacoes/listar", {
+        method: "GET",
+    }).then(function (resposta) {
+
+
+        resposta.json().then(function (data) {
+            let len = data.length;
+            
+            for (let i = 0; i < len; i++){
+                let arquivo = data[i];
+                fks.push(arquivo.fkUsuario);
+            }
+            
+        });
+    }).catch(function (error) {
+        console.error(`ERROR`, error);
+    });
+    }
+    
+</script>
